@@ -1,0 +1,11 @@
+[Unit]
+Description=printer
+After=network-online.target
+
+[Service]
+Restart=always
+RestartSec=3
+ExecStart=/usr/bin/python3 -u /opt/printer/main.py
+
+[Install]
+WantedBy=multi-user.target
